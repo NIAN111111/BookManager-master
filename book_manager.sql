@@ -136,11 +136,11 @@ INSERT INTO `borrow` VALUES (40, 14, 1, '2021-11-19 22:57:21', '2021-11-19 22:57
 
 -- 留言表
 CREATE TABLE `message` (
-  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '留言ID',
-  `user_id` int(11) NOT NULL COMMENT '用户ID',
+  `userId` int NOT NULL AUTO_INCREMENT COMMENT '用户ID',
+  `userName` varchar(20) DEFAULT NULL COMMENT '用户名',
   `content` text NOT NULL COMMENT '留言内容',
   `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '留言时间',
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`userId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='留言表';
 -- ----------------------------
 -- Table structure for user
